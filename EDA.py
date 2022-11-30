@@ -35,11 +35,25 @@ df['Datetime'] = pd.to_datetime(df['Datetime'])
 df = df.sort_values(by=['Datetime'])
 
 
-# In[6]:
+# In[22]:
 
 
 plt.title('visual of time series data')
 plt.plot(df.Datetime, df.Count)
+
+
+# In[23]:
+
+
+plt.title('visual of time series data')
+plt.plot(df.Datetime, df.Count.diff())
+
+
+# In[24]:
+
+
+plt.title('visual of time series data')
+plt.plot(df.Datetime, df.Count.diff().diff())
 
 
 # In[7]:
